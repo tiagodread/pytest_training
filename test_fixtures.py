@@ -13,19 +13,19 @@ class Borrower:
 
 @pytest.fixture
 def borrower():
-    borrower = Borrower('Tiago Góes da Silva', '434.201.478-56', 5000, 24, 'Comprar uma bike')
+    borrower = Borrower('Sergio', '254.896.748-56', 5000, 24, 'Comprar uma bike')
     return borrower
 
 
 @pytest.fixture
 def borrower2():
-    b2 = Borrower('Priscila', '367.222.388-30', 2000, 12, 'Casamento')
+    b2 = Borrower('Fernando', '856.695.874-55', 2000, 12, 'teste')
     return b2
 
 
 def test_borrower_data(borrower):
-    assert 'Tiago' in borrower.name
-    assert '434.201.478-56' == borrower.cpf
+    assert 'Sergio' in borrower.name
+    assert '254.896.748-56' == borrower.cpf
 
 
 def test_borrower_request(borrower):
